@@ -90,7 +90,7 @@
       items: function (it, i, K) {
         return K.rf('items', i, 'desc', t('rt.dish'), { cls: 'it-d', sug: 'item' }) +
           '<div class="f pos-qty"><label for="r-items-qty-' + i + '">' + esc(t('l.qty')) + '</label><div class="step"><button type="button" class="btn sm" data-step="' + i + ':-1" aria-label="−1">−</button><input id="r-items-qty-' + i + '" data-r="items" data-i="' + i + '" data-k="qty" value="' + esc(it.qty) + '" inputmode="decimal" dir="ltr"><button type="button" class="btn sm" data-step="' + i + ':1" aria-label="+1">+</button></div></div>' +
-          K.rf('items', i, 'price', t('l.rate'), { mode: 'decimal', ltr: 1 }) + K.rf('items', i, 'note', t('rt.knote'), { ph: t('rt.knoteph') }) +
+          K.rf('items', i, 'price', t('l.rate'), { mode: 'decimal', ltr: 1 }) + K.rf('items', i, 'note', t('rt.knote'), { ph: t('rt.knoteph'), cls: 'it-d' }) +
           (it.kot ? '<p class="hint wide">' + esc(t('rt.sent', { n: it.kot })) + '</p>' : '');
       }
     },
